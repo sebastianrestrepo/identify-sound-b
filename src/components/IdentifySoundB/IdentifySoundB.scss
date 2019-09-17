@@ -15,12 +15,14 @@ section {
   
    
 }
+
 .description-items-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem 1rem ;
 }
+
 
 .input-row {
     &.search {
@@ -30,6 +32,22 @@ section {
         }
     }
 }
+
+.input-col {
+    display: flex;
+    flex-direction: column;
+    &.search {
+        justify-content: space-between;
+        input {
+            width: 50%;
+        }
+    }
+}
+
+.birds{
+    margin-left: 10px;
+}
+
 .card-item {
     padding: 0.5rem 1rem;
 }
