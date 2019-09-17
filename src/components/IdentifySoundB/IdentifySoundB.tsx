@@ -22,7 +22,7 @@ import { relative, isAbsolute } from 'path';
     }
 
     render() {
-        return <section >
+        return <section>
             <div className="card-header">
                 <h1>Selección</h1>
                 <img className="close-icon" src="./assets/icons/close.svg" alt="" />
@@ -71,12 +71,11 @@ import { relative, isAbsolute } from 'path';
                         </select>
                     </span>
                     <span className="input-col card-item"> <p className="text-title"> Anotación/Comentario:</p> <input type="text" /></span>
-                    <label><input type="checkbox" id="myCheck"></input>No estoy seguro de que especie es</label>
+                    <label><input type="checkbox" id="myCheck"></input>Etiquetar</label>
+                    <label><input type="checkbox" id="myCheck"></input>Pendiente</label>
+                    <label><input type="checkbox" id="myCheck"></input>Etiquetar</label>
                     <div className="btns">
-                        <button className="green-button" style={{}}>Etiquetar</button>
-                        <button className="green-button" style={{
-                            backgroundColor: 'orange'
-                        }}>Pendiente</button>
+                        <button className="green-button" style={{}}>Guardar</button>
                     </div>
                 </div>
                 : ''}
