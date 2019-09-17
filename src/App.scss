@@ -41,6 +41,9 @@ body{
             border: solid 1px #44CD88;
         }
     }
+    input[type="checkbox"] {
+        height: auto;
+    }
     select {
         margin: 0 0.5rem;
         padding: 5px;

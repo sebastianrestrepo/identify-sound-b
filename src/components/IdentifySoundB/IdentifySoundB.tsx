@@ -34,7 +34,9 @@ import { relative, isAbsolute } from 'path';
           onPosChange={taggingStore.handlePosChange}
           playing={taggingStore.playingAudio}
             />*/}
-                <img src="./assets/espectogramaB.png" alt="" onClick={() => {
+                <img className="spectro" 
+                src="./assets/espectogramaB.png" alt="" 
+                onClick={() => {
                     this.showTagOption = !this.showTagOption;
                     this.posXCard = taggingStore.posXCard;
                     this.posYCard = taggingStore.posYCard;
@@ -42,7 +44,8 @@ import { relative, isAbsolute } from 'path';
                 }} />
             </div>
             {(this.showTagOption)
-                ? <div className="card-section" id="card-for-tagging" style={{
+                ? <div className="card-section" id="card-for-tagging" 
+                style={{
                     top: this.posYCard,
                     left: this.posXCard,
                 }}>
@@ -51,16 +54,20 @@ import { relative, isAbsolute } from 'path';
                         <p><span className="text-title">Hora:</span> 06:36 AM</p>
                         <p><span className="text-title">Duración:</span> 5s</p>
                     </span>
-                    <div style={{
+                    <div className="card-item" style={{
                         display: 'flex',
                         flexDirection: 'column'
                     }}>
                         <p>Especies estudiando</p>
-                        <img src="./assets/Birds.png" alt="" className="img-birds" width="246"></img>
+                        <img src="./assets/Birds.png" 
+                        onClick={() => { 
+                            taggingStore.birdClick()
+                        } }
+                        alt="" className="img-birds" width="246"></img>
                     </div>
                     <span className="input-row card-item">
-                        <span className="input-col card-item"> <p className="text-title"> Nombre Común:</p> <input type="text" /></span>
-                        <span className="input-col card-item"> <p className="text-title"> Nombre Científico:</p> <input type="text" /></span>
+                        <span className="input-col "> <p className="text-title"> Nombre Común:</p> <input type="text" value={taggingStore.commonName} /></span>
+                        <span className="input-col "> <p className="text-title"> Nombre Científico:</p> <input type="text" value={taggingStore.sciName} /></span>
                     </span>
                     <span className="input-row card-item">
                         <p className="text-title">Tipo de canto:</p>
@@ -71,9 +78,9 @@ import { relative, isAbsolute } from 'path';
                         </select>
                     </span>
                     <span className="input-col card-item"> <p className="text-title"> Anotación/Comentario:</p> <input type="text" /></span>
-                    <label><input type="checkbox" id="myCheck"></input>Etiquetar</label>
-                    <label><input type="checkbox" id="myCheck"></input>Pendiente</label>
-                    <label><input type="checkbox" id="myCheck"></input>Etiquetar</label>
+                    <label className="card-item"><input type="checkbox" id="myCheck"></input>Etiquetar</label>
+                    <label className="card-item"><input type="checkbox" id="myCheck"></input>Pendiente</label>
+                    <label className="card-item"><input type="checkbox" id="myCheck"></input>Etiquetar</label>
                     <div className="btns">
                         <button className="green-button" style={{}}>Guardar</button>
                     </div>
