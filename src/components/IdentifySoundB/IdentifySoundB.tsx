@@ -51,8 +51,10 @@ import { relative, isAbsolute } from 'path';
                     <p><span className="text-title">Hora:</span> 06:36 AM</p>
                     <p><span className="text-title">Duración:</span> 5s</p>
                 </span>
+                <img src="./assets/Birds.png" alt=""></img>
                 <span className="input-row card-item">
-                    <p className="text-title">Especie:</p> <input type="text" />
+                    <p className="text-title"> Nombre Común:</p> <input type="text" />
+                    <p className="text-title"> Nombre Científico:</p> <input type="text" />
                 </span>
                 <span className="input-row card-item">
                     <p className="text-title">Tipo de canto:</p>
@@ -63,7 +65,11 @@ import { relative, isAbsolute } from 'path';
                     </select>
                 </span>
                 <p className="green-link card-item">Agregar anotación o comentario</p>
+                <label><input type="checkbox" id="myCheck"></input>No estoy seguro de que especie es</label>
                 <button className="green-button" style={{}}>Etiquetar</button>
+                <button className="green-button" style={{
+                    backgroundColor: 'orange'
+                }}>Pendiente</button>
             </div>
             :''}
             <div className="card-section">
