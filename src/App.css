@@ -101,4 +101,9 @@ body .card-section {
   border-bottom: solid 1px #dbdbdb;
   padding: 1rem 0;
 }
+
+body #card-for-tagging {
+  position: absolute;
+  background-color: white;
+}
 /*# sourceMappingURL=App.css.map */
